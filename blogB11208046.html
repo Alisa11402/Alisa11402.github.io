@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>嘎嘣脆的魔力 - 韓式炸雞文化誌</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Noto+Sans+TC:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            gold: '#FFD700',
+                            orange: '#FF4D00',
+                            dark: '#0F0F0F',
+                            accent: '#FF8C00',
+                            card: 'rgba(255, 255, 255, 0.05)'
+                        }
+                    },
+                    fontFamily: {
+                        display: ['Outfit', 'Noto Sans TC', 'sans-serif'],
+                        body: ['Noto Sans TC', 'sans-serif'],
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0F0F0F;
+            color: #E2E8F0;
+            overflow-x: hidden;
+        }
+        .glass-morphism {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .text-gradient {
+            background: linear-gradient(to right, #FFD700, #FF4D00);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .glow-button {
+            box-shadow: 0 0 20px rgba(255, 77, 0, 0.4);
+            transition: all 0.3s ease;
+        }
+        .glow-button:hover {
+            box-shadow: 0 0 35px rgba(255, 77, 0, 0.6);
+            transform: translateY(-2px);
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0F0F0F;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #333;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #FF4D00;
+        }
+        .banner-container img {
+            width: 100%;
+            height: 80vh;
+            object-fit: cover;
+            filter: brightness(0.6);
+        }
+    </style>
+</head>
+<body class="font-body selection:bg-orange-500 selection:text-white">
+
+    <!-- Sticky Nav -->
+    <nav class="fixed top-0 w-full z-50 glass-morphism py-4 px-8 flex justify-between items-center">
+        <div class="font-display font-extrabold text-2xl tracking-tighter text-white">
+            CRUNCH<span class="text-orange-500">.</span>LAB
+        </div>
+        <div class="hidden md:flex gap-8 text-sm font-medium tracking-widest uppercase text-gray-400">
+            <span class="text-orange-500 underline underline-offset-8">Insight</span>
+            <span>B11208046</span>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative h-[90vh] flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0 banner-container">
+            <img src='https://opal.google/board/blobs/33cb1a63-16c9-4860-83a3-1c1c995ef3f6' alt='Korean Fried Chicken Banner' />
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-transparent"></div>
+        
+        <div class="relative z-10 text-center px-4 max-w-5xl">
+            <div class="inline-block px-4 py-1 mb-6 border border-orange-500/50 rounded-full text-orange-400 text-xs font-bold tracking-widest uppercase animate-pulse">
+                Food Culture & Sociology
+            </div>
+            <h1 class="text-5xl md:text-8xl font-display font-black mb-6 leading-tight">
+                「嘎嘣脆」的魔力！<br/>
+                <span class="text-gradient">為何全球都為之瘋狂？</span>
+            </h1>
+            <p class="text-lg md:text-xl text-gray-300 font-light max-w-2xl mx-auto mb-8 leading-relaxed">
+                探討韓式炸雞如何從戰後的物資匱乏，演變成席捲全球的文化圖騰。
+            </p>
+            <div class="flex items-center justify-center gap-4">
+                <span class="h-[1px] w-12 bg-orange-500"></span>
+                <span class="text-sm font-bold tracking-widest uppercase">學號 B11208046</span>
+                <span class="h-[1px] w-12 bg-orange-500"></span>
+            </div>
+        </div>
+    </header>
+
+    <main class="relative z-10 -mt-20 px-4 md:px-0">
+        <!-- Content Container -->
+        <div class="max-w-4xl mx-auto bg-brand-dark/80 backdrop-blur-md rounded-3xl p-8 md:p-16 shadow-2xl border border-white/5">
+            
+            <!-- Introduction -->
+            <section class="mb-16">
+                <p class="text-xl md:text-2xl text-gray-200 leading-relaxed italic border-l-4 border-orange-500 pl-6 mb-12">
+                    「當我們在深夜的沙發上，看著韓劇裡的男女主角大口咬下那金黃酥脆的炸雞，配上一口透心涼的生啤酒時...那種『嘎嘣』聲，是現代都市人最極致的救贖。」
+                </p>
+                <p class="text-gray-400 leading-loose text-lg">
+                    以前提到 KFC，大家腦中閃過的是那位和藹的白鬍子肯德基上校；但現在，「Korean Fried Chicken」（韓式炸雞）已經成功重新定義了這個縮寫。作為一名美食愛好者與業餘社會觀察家，我不禁想問：這份「洋味」與「韓魂」的私生子，究竟如何演變成席捲全球的文化圖騰？
+                </p>
+            </section>
+
+            <!-- Bento Grid Features -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
+                <!-- Section 1 -->
+                <div class="glass-morphism p-8 rounded-3xl hover:bg-white/10 transition-all duration-500 group">
+                    <div class="text-orange-500 font-display font-black text-4xl mb-4 group-hover:scale-110 transition-transform origin-left">01</div>
+                    <h3 class="text-2xl font-bold text-white mb-4">物理學與藝術的交界</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        擁有「玻璃質感」的酥脆薄膜。背後的黑科技正是**「二次油炸」（Double Frying）**。這是一場關於溫度的精密實驗：將皮下脂肪徹底排出，讓外皮脆如紙片，即便淋上醬汁，依然維持長效脆感。
+                    </p>
+                </div>
+
+                <!-- Section 2 -->
+                <div class="glass-morphism p-8 rounded-3xl hover:bg-white/10 transition-all duration-500 group">
+                    <div class="text-orange-500 font-display font-black text-4xl mb-4 group-hover:scale-110 transition-transform origin-left">02</div>
+                    <h3 class="text-2xl font-bold text-white mb-4">從美軍口糧到社會安全網</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        1950 年代美軍將南方黑人士兵的炸雞文化帶入。1997 年金融危機時，大量退休人士投入炸雞加盟店，讓炸雞成了無數家庭奮鬥的「失業安全網」。
+                    </p>
+                </div>
+
+                <!-- Section 3 - Large Span -->
+                <div class="md:col-span-2 glass-morphism p-8 md:p-12 rounded-3xl hover:bg-white/10 transition-all duration-500 relative overflow-hidden group">
+                    <div class="absolute -right-10 -bottom-10 opacity-10 group-hover:scale-110 transition-transform duration-700">
+                        <svg width="200" height="200" viewBox="0 0 24 24" fill="currentColor" class="text-orange-500"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9v-2h2v2zm0-4H9V7h2v5z"/></svg>
+                    </div>
+                    <div class="text-orange-500 font-display font-black text-4xl mb-4 group-hover:scale-110 transition-transform origin-left">03</div>
+                    <h3 class="text-3xl font-bold text-white mb-6">炸雞戰國：品牌四大天王</h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+                        <div class="bg-black/40 p-4 rounded-xl border border-white/5">
+                            <h4 class="text-orange-400 font-bold mb-2">橋村 Kyochon</h4>
+                            <p class="text-xs text-gray-500 uppercase tracking-tighter">蒜味蜂蜜黨聖地</p>
+                        </div>
+                        <div class="bg-black/40 p-4 rounded-xl border border-white/5">
+                            <h4 class="text-orange-400 font-bold mb-2">bb.q</h4>
+                            <p class="text-xs text-gray-500 uppercase tracking-tighter">橄欖油貴族派</p>
+                        </div>
+                        <div class="bg-black/40 p-4 rounded-xl border border-white/5">
+                            <h4 class="text-orange-400 font-bold mb-2">BHC</h4>
+                            <p class="text-xs text-gray-500 uppercase tracking-tighter">雪花起司先驅</p>
+                        </div>
+                        <div class="bg-black/40 p-4 rounded-xl border border-white/5">
+                            <h4 class="text-orange-400 font-bold mb-2">Goobne 貢乃</h4>
+                            <p class="text-xs text-gray-500 uppercase tracking-tighter">健康狂熱烤雞派</p>
+                        </div>
+                    </div>
+                    <p class="mt-8 text-gray-400">
+                        受惠於《來自星星的你》，「Chimaek」（炸雞+啤酒）成了浪漫的代名詞，將韓國生活儀式輸出全球。
+                    </p>
+                </div>
+            </div>
+
+            <!-- Content Mid-Section -->
+            <article class="space-y-12">
+                <section>
+                    <h2 class="text-3xl font-black text-white mb-6 flex items-center gap-4">
+                        <span class="w-8 h-[2px] bg-orange-500"></span>
+                        繁榮背後的陰影
+                    </h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                        <div class="space-y-4">
+                            <h4 class="text-xl font-bold text-orange-200">錢包與健康</h4>
+                            <p class="text-gray-400 leading-loose">
+                                隨著原物料上漲，韓國民眾發現炸雞價格已飆破 30,000 韓元。更引發了「縮量通膨」（Shrinkflation）疑雲，消費者發現雞肉份量縮水，引發信任危機。
+                            </p>
+                        </div>
+                        <div class="space-y-4">
+                            <h4 class="text-xl font-bold text-orange-200">永恆的哲學命題</h4>
+                            <p class="text-gray-400 leading-loose">
+                                高熱量、高鈉含量，是一口咬下快感後必須支付的代價。我們追求的是當下的歡樂，還是長遠的健康？
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Future Section -->
+                <section class="bg-gradient-to-br from-orange-950/40 to-black p-8 rounded-3xl border border-orange-500/20">
+                    <h2 class="text-3xl font-black text-white mb-6">炸雞黑科技：機器人會取代阿珠媽嗎？</h2>
+                    <div class="space-y-6 text-gray-400 leading-loose">
+                        <p>
+                            站在未來的街頭，韓式炸雞正在向科技靠攏。**「機械手臂」**已經開始進駐廚房，精準控制出油時間與甩油力道，雖然少了點人情味，但那種標準化的極致何嘗不是一種工業之美？
+                        </p>
+                        <p>
+                            因應環保浪潮，**「植物肉炸雞」**也悄然登場。利用大豆蛋白模擬纖維質感，只要大腦能被騙過，誰還在乎那是不是真的雞？
+                        </p>
+                    </div>
+                </section>
+
+                <!-- Conclusion -->
+                <section class="text-center pt-10 border-t border-white/10">
+                    <h2 class="text-4xl font-display font-black text-white mb-8">今晚，你決定好點哪一家的炸雞了嗎？</h2>
+                    <p class="text-gray-400 max-w-2xl mx-auto mb-10 leading-loose">
+                        韓式炸雞已經超越了一道料理，它是一個文化載體、是一段社會歷史的縮影，也是科技與美食結合的實驗場。儘管有重重憂慮與漲價困擾，但生活總有疲憊的時候。人生的滿足感，有時候真的只需要這份誠意十足的「嘎嘣脆」。
+                    </p>
+                    
+                    <button class="glow-button bg-orange-600 text-white px-10 py-4 rounded-full font-bold tracking-widest text-sm uppercase">
+                        馬上開啟 Chi-Maek 時光
+                    </button>
+                </section>
+            </article>
+        </div>
+    </main>
+
+    <!-- Visual Accents -->
+    <div class="fixed top-1/4 -right-20 w-64 h-64 bg-orange-600/10 blur-[100px] rounded-full -z-10 animate-pulse-slow"></div>
+    <div class="fixed bottom-1/4 -left-20 w-80 h-80 bg-brand-gold/10 blur-[120px] rounded-full -z-10 animate-float"></div>
+
+    <script>
+        // Smooth scroll effect
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add some interaction on the grid cards
+        const cards = document.querySelectorAll('.glass-morphism');
+        cards.forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                card.style.setProperty('--mouse-x', `${x}px`);
+                card.style.setProperty('--mouse-y', `${y}px`);
+            });
+        });
+    </script>
+</body>
+</html>
